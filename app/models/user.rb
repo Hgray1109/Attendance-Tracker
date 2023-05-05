@@ -16,6 +16,12 @@ class User < ApplicationRecord
               password: Devise.friendly_token[0,20]
            )
        end
+       user.provider = access_token.provider
+       user.uid = access_token.uid
+       user.name = data.name
+       user.image = data.image
+       user.save
+
        user.confirmed_at = Time.now
        user
     end
