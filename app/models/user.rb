@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, 
          :confirmable, :trackable, :lockable, :omniauthable, omniauth_providers: [:github]
 
+include Roleable
 
 
     def self.from_omniauth(access_token)

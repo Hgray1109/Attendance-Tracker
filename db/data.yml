@@ -1,0 +1,210 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2023-05-04 22:27:27.454154'
+    - '2023-05-04 22:27:27.454154'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - created_at
+  - updated_at
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - failed_attempts
+  - locked_at
+  - unlock_token
+  - provider
+  - uid
+  - name
+  - image
+  records: 
+  - - 1
+    - admin@test.com
+    - "$2a$12$QojYTbY6h.BqsIj2qNR5buZg5f056RMOSQEZzwF6Q9XDkiOjpY1fu"
+    -
+    -
+    -
+    - '2023-05-04 22:30:21.512608'
+    - '2023-05-05 00:33:06.742254'
+    - shPQcZzVrp2DVG3Jwui7
+    - '2023-05-04 22:30:23.372442'
+    - '2023-05-04 22:30:21.512854'
+    -
+    - 9
+    - '2023-05-05 00:33:06.741838'
+    - '2023-05-05 00:29:22.694186'
+    - "::1"
+    - "::1"
+    - 0
+    -
+    -
+    -
+    -
+    -
+    -
+  - - 2
+    - test@test.com
+    - "$2a$12$LcD6jua910OCYEiXnMLk7.yDLIf5jZxuyUX8Y9GLuxmI.5OQBj33i"
+    -
+    -
+    -
+    - '2023-05-04 22:30:22.082076'
+    - '2023-05-04 22:30:22.082076'
+    - UfS9o_topVTXqt9z4oxF
+    - '2023-05-04 22:30:23.372442'
+    - '2023-05-04 22:30:22.082154'
+    -
+    - 0
+    -
+    -
+    -
+    -
+    - 0
+    -
+    -
+    -
+    -
+    -
+    -
+  - - 3
+    - test1@test.com
+    - "$2a$12$UygcVKYbDj0vMSdXbUhNHeFvCLaK4rsQ2H41wxvBUkGsCzTzjOf6i"
+    -
+    -
+    -
+    - '2023-05-04 22:30:22.404496'
+    - '2023-05-04 22:30:22.404496'
+    - pBLWp1M4nTssqVJjws7B
+    - '2023-05-04 22:30:23.372442'
+    - '2023-05-04 22:30:22.404586'
+    -
+    - 0
+    -
+    -
+    -
+    -
+    - 0
+    -
+    -
+    -
+    -
+    -
+    -
+  - - 4
+    - test2@test.com
+    - "$2a$12$8ZARKUT.XC5HkzqcSUkle.wN1llemDPjPTBTYGkb/kkCGM84D3Wim"
+    -
+    -
+    -
+    - '2023-05-04 22:30:22.717275'
+    - '2023-05-04 22:30:22.717275'
+    - Lxoyx-WoT7tSed817z4k
+    - '2023-05-04 22:30:23.372442'
+    - '2023-05-04 22:30:22.717369'
+    -
+    - 0
+    -
+    -
+    -
+    -
+    - 0
+    -
+    -
+    -
+    -
+    -
+    -
+  - - 5
+    - test3@test.com
+    - "$2a$12$Ue2DUOrEY.uZ/5bizxhUWOF7q49wqoCQqqlLGHiGOIO6yZS5NMJwe"
+    -
+    -
+    -
+    - '2023-05-04 22:30:23.053692'
+    - '2023-05-04 22:30:23.053692'
+    - ky9AweCe18hbViERsJ5e
+    - '2023-05-04 22:30:23.372442'
+    - '2023-05-04 22:30:23.053769'
+    -
+    - 0
+    -
+    -
+    -
+    -
+    - 0
+    -
+    -
+    -
+    -
+    -
+    -
+  - - 6
+    - test4@test.com
+    - "$2a$12$BXNKtxMi45UkDzPB6Vn/XePdU9BjFBweLpP/NrDFcUCqyP62A0Zx2"
+    -
+    -
+    -
+    - '2023-05-04 22:30:23.362343'
+    - '2023-05-04 22:30:23.362343'
+    - WdTJxiiZJHDUakxn9gs5
+    - '2023-05-04 22:30:23.372442'
+    - '2023-05-04 22:30:23.362417'
+    -
+    - 0
+    -
+    -
+    -
+    -
+    - 0
+    -
+    -
+    -
+    -
+    -
+    -
+  - - 16
+    - hgray1109@gmail.com
+    - "$2a$12$GXrosVcVpvq2oCLBBTQKSeM7XdqZV2eID4lX2fbM/Ij.4TCbsiUri"
+    -
+    -
+    -
+    - '2023-05-05 01:33:29.833271'
+    - '2023-05-05 01:33:29.877268'
+    - mgN8fF4cqfm4yJ6JKzHs
+    - '2023-05-05 01:33:29.876248'
+    - '2023-05-05 01:33:29.833546'
+    -
+    - 1
+    - '2023-05-05 01:33:29.876793'
+    - '2023-05-05 01:33:29.876793'
+    - "::1"
+    - "::1"
+    - 0
+    -
+    -
+    - github
+    - '83735077'
+    - Hashem Sowande Gray
+    - https://avatars.githubusercontent.com/u/83735077?v=4
