@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem "omniauth-rails_csrf_protection"
-gem 'pg'
+gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'yaml_db'
 
 
