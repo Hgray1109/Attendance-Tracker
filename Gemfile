@@ -16,6 +16,7 @@ gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem "omniauth-rails_csrf_protection"
 gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'yaml_db'
+gem 'omniauth-google-oauth2'
 
 
 

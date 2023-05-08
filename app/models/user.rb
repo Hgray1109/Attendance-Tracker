@@ -3,14 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
-         :confirmable, :trackable, :lockable, :omniauthable, omniauth_providers: [:github]
+         :confirmable, :trackable, :lockable, :omniauthable, omniauth_providers: [:github, :google_oauth2]
 
 include Roleable
 
 
     def self.from_omniauth(access_token)
       data = access_token.info
-      user = User.where(email: data['email'].downcase).first
+      user = User.find_by(email: data['email'].downcase)
       unless user
            user = User.create(
               email: data['email'],
