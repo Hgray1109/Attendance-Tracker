@@ -27,4 +27,9 @@ include Roleable
        user
     end
 
+    after_create do
+      # assign default role to user
+      self.update(student: true)
+    end
+
 end
