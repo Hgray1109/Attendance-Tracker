@@ -33,4 +33,7 @@ include Roleable
       self.update(student: true)
     end
 
+    def to_s
+      email
+    end
 end

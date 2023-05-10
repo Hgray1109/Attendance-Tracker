@@ -7,6 +7,9 @@
         <b>Confirmation:</b>
         <%= boolean_label(@user.confirmed?) %>
         <br/>
+        <b>Created by Invitation:</b>
+        <%= boolean_label(@user.created_by_invite?) %>
+        <br/>
         <b><%= "sign_in_count".humanize %>: </b>
         <%= @user.sign_in_count %>
         <br/>
@@ -37,6 +40,13 @@
         <b><%= "image".humanize %>: </b>
         <% if @user.image.present? %>
         <%= image_tag @user.image, size: "50x50" %>
+        <% end %>
+        <br/>
+        <b><%= "Invited by".humanize %>: </b>
+        <% if @user.invited_by %>
+            <%= @user.invited_by %>
+            <% else %>
+            none
         <% end %>
         <br/>
         <b><%= "roles".humanize %>: </b>
