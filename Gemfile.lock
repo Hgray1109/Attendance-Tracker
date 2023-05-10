@@ -95,6 +95,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.8)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     erubi (1.12.0)
     faraday (2.7.4)
       faraday-net_http (>= 2.0, < 3.1)
@@ -244,8 +247,6 @@ GEM
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
-    toastr-rails (1.0.3)
-      railties (>= 3.1.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -287,6 +288,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise (~> 4.9, >= 4.9.2)
+  devise_invitable (~> 2.0.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   omniauth-github!
@@ -300,7 +302,6 @@ DEPENDENCIES
   selenium-webdriver (>= 4.0.0.rc1)
   spring
   sqlite3 (~> 1.4)
-  toastr-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
