@@ -1,33 +1,45 @@
-<h2> Editing Roles for <%= @user.email %> </h2>
-
-<%= form_for(@user) do |f| %>
-
-    <% if @user.errors.any? %>
-        <div id="error_explanation">
-        <h2>
-            <%= pluralize(@user.errors.count, "error") %>
-            prohibited this user from being saved:
-        </h2>
-        <ul>
-            <% @user.errors.full_messages.each do |message| %>
-                <li>
-                <%= message %>
-                </li>
+<div class="card">
+  <div class="card-header">
+    <h2> Editing Roles for <%= @user.email %> </h2>
+  </div>
+  <div class="card-body">
+    <%= form_for(@user) do |f| %>
+    
+        <% if @user.errors.any? %>
+            <div id="error_explanation">
+            <h2>
+                <%= pluralize(@user.errors.count, "error") %>
+                prohibited this user from being saved:
+            </h2>
+            <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                    <li>
+                    <%= message %>
+                    </li>
+                <% end %>
+            </ul>
+            </div>
+        <% end %>
+    
+        <% User::ROLES.each do |role| %>
+            <label>
+                <%= f.check_box role %>
+                <%= role.to_s.humanize %>
+            </label>
+            <br>
             <% end %>
-        </ul>
-        </div>
-    <% end %>
+            <%= f.button :submit %>
+        <% end %>
+  </div>
+  <div class="card-footer">
+        <br/>
+        <%= link_to "Cancel", user_path(@user) %>
+  </div>  
+</div>
 
-    <% User::ROLES.each do |role| %>
-        <label>
-            <%= f.check_box role %>
-            <%= role.to_s.humanize %>
-        </label>
-        <br>
-      <% end %>
 
-      <%= f.button :submit %>
 
-    <% end %>
-  <br/>
-    <%= link_to "Cancel", user_path(@user) %>
+
+
+
+ 

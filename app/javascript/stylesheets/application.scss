@@ -1,1 +1,19 @@
-@import 'toastr'
+@import 'toastr';
+
+body {
+    background: linear-gradient(to right, #bbd2c5, #536976);
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+footer {
+    margin-top: auto;
+}
