@@ -18,6 +18,8 @@ gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'yaml_db'
 gem 'omniauth-google-oauth2'
 gem 'devise_invitable', '~> 2.0.0'
+gem 'invisible_captcha'
+
 
 
 
