@@ -20,7 +20,9 @@ include Roleable
        end
        user.provider = access_token.provider
        user.uid = access_token.uid
-       user.name = data.name
+       unless user.name.present?
+        user.name = data.name
+       end
        user.image = data.image
        user.save
 

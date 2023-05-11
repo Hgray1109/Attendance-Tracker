@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h2> Editing Roles for <%= @user.email %> </h2>
+    <h2> Editing Roles for <%= @user.name %> </h2>
   </div>
   <div class="card-body">
     <%= form_for(@user) do |f| %>
@@ -20,17 +20,25 @@
             </ul>
             </div>
         <% end %>
-    
-        <% User::ROLES.each do |role| %>
-            <label>
-                <%= f.check_box role %>
-                <%= role.to_s.humanize %>
-            </label>
-            <br>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br/>
+
+        <% if current_user.admin? || current_user.teacher? %>
+            <% User::ROLES.each do |role| %>
+                <label>
+                    <%= f.check_box role %>
+                    <%= role.to_s.humanize %>
+                </label>
+                <br>
             <% end %>
-            <%= f.button :submit %>
+        <% end %>    
+        <br/>
+        <%= f.button :submit %>
         <% end %>
   </div>
+
   <div class="card-footer">
         <br/>
         <%= link_to "Cancel", user_path(@user) %>
