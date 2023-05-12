@@ -38,4 +38,8 @@ include Roleable
     def to_s
       email
     end
+
+    def to_label
+      to_s
+    end
 end

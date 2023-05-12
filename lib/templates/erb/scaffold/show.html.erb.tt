@@ -1,3 +1,7 @@
+ <div class="text-center">
+    <%%= link_to "New <%= singular_table_name %>", new_<%= singular_table_name %>_path, class: 'btn btn-primary' %>
+  </div>
+  <br/>
 <div class="card shadow">
   <div class="card-header">
     <h4>
@@ -12,7 +16,7 @@
   <% end %>
   </div>
   <div class="card-footer">
-    <%%= link_to 'Back', <%=plural_table_name %>_path
+    <%%= link_to 'Back', <%=plural_table_name %>_path %>
     <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-sm btn-warning' %>
     <%%= link_to 'Destroy', @<%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
   </div>

@@ -1,0 +1,31 @@
+ <div class="text-center">
+    <%= link_to "New course", new_course_path, class: 'btn btn-primary' %>
+  </div>
+  <br/>
+<div class="card shadow">
+  <div class="card-header">
+    <h4>
+      Course
+    </h4>
+  </div>
+  <div class="card-body">
+  
+    <b>User:</b>
+    <%= @course.user %>
+    <br>
+  
+    <b>Classroom:</b>
+    <%= @course.classroom %>
+    <br>
+  
+    <b>Subject:</b>
+    <%= @course.subject %>
+    <br>
+  
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Back', courses_path %>
+    <%= link_to 'Edit', edit_course_path(@course), class: 'btn btn-sm btn-warning' %>
+    <%= link_to 'Destroy', @course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+  </div>
+</div>

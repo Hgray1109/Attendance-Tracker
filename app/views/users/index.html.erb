@@ -1,7 +1,12 @@
-<div class="text-center">
-    <h2>Users: <%= @users.count %></h2>
-    </br>
-</div>
+<h3>
+  <div class="text-center">
+    Users
+    <div class="badge badge-info">
+      <%= @users.count %>
+    </div>
+    <%= link_to "Send Invite", new_user_invitation_path, class: 'btn btn-primary' %>
+  </div>
+</h3>
 
 <div class="table-responsive" >
     <table class="table table-dark table-striped table-hover shadow">
