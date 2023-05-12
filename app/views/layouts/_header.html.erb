@@ -18,9 +18,13 @@
             <div class="fa fa-users"></div>
             Users
           <% end %>
-          <%= link_to classrooms_path, class: "nav-link #{'active fw-bold' if current_page?(classrooms_path)}" do %>
-            <div class="fa fa-users"></div>
+          <%= link_to classrooms_path, class: "nav-link  #{'active fw-bold' if current_page?(classrooms_path)}" do %>
+          <div class="fa-solid fa-door-open"></div>
             Classrooms
+          <% end %>
+          <%= link_to subjects_path, class: "nav-link #{'active fw-bold' if current_page?(subjects_path)}" do %>
+            <div class="fa-solid fa-book-open"></div>
+            Subjects
           <% end %>
           <%= link_to new_user_invitation_path, class: "nav-link #{'active fw-bold' if current_page?(new_user_invitation_path)}" do %>
           <div class="fa-solid fa-envelope"></div>

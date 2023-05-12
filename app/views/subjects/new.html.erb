@@ -1,0 +1,14 @@
+<div class="card shadow">
+  <div class="card-header">
+    <h4>
+      New
+      Subject
+    </h4>
+  </div>
+  <div class="card-body">
+    <%= render 'form', subject: @subject %>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Cancel', subjects_path %>
+  </div>
+</div>
