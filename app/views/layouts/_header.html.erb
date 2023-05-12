@@ -18,6 +18,10 @@
             <div class="fa fa-users"></div>
             Users
           <% end %>
+          <%= link_to classrooms_path, class: "nav-link #{'active fw-bold' if current_page?(classrooms_path)}" do %>
+            <div class="fa fa-users"></div>
+            Classrooms
+          <% end %>
           <%= link_to new_user_invitation_path, class: "nav-link #{'active fw-bold' if current_page?(new_user_invitation_path)}" do %>
           <div class="fa-solid fa-envelope"></div>
             Invite Users
