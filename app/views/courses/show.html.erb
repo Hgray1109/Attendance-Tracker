@@ -21,6 +21,14 @@
     <b>Subject:</b>
     <%= @course.subject %>
     <br>
+
+    <b>Start Time:</b>
+    <%= @course.start_time&.strftime("%I:%M %p") %>
+    <br>
+
+    <b>Days:</b>
+    <%= @course.active_days.join(", ") %>
+    <br>
   
   </div>
   <div class="card-footer">
