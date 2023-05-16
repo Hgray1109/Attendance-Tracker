@@ -50,6 +50,7 @@
               <%= occurrence&.strftime("%b/%d/%y") %>
               <br/>
               <% end %>
+              <%= link_to "Generate Lesson", generate_lessons_course_path(course), method: :patch %>
               </td>
           
           <td>

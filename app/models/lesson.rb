@@ -11,4 +11,5 @@ class Lesson < ApplicationRecord
     STATUSES.map { |status| [status, status]}
   end
 
+
 end
