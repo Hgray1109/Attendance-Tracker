@@ -21,6 +21,7 @@ gem 'devise_invitable', '~> 2.0.0'
 gem 'invisible_captcha'
 gem 'simple_form'
 gem "ice_cube"
+gem "simple_calendar", "~> 2.4"
 
 
 

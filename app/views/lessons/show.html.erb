@@ -27,7 +27,7 @@
     <br>
   
     <b>Start:</b>
-    <%= @lesson.start %>
+    <%= @lesson.start&.strftime("%b/%d/%y %I:%M %p")  %>
     <br>
   
   </div>
