@@ -260,6 +260,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    vanilla_nested (1.7.0)
     version_gem (1.1.2)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -316,6 +317,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
+  vanilla_nested
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)

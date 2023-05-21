@@ -17,9 +17,27 @@
       <br>
   <% end %>
 
-  </div>
+      <h3>Enrollments</h3>
+      
+      
+      
+    <%= link_to_add_nested(f, :enrollments, '#enrollments') do %>
+      <span><span>Add Enrollment</span></span>
+    <% end %>
+
+
+      <div id='enrollments'>
+      <%= f.simple_fields_for :enrollments do |enrollment| %>
+        <%= render 'enrollment_fields', form: enrollment %>
+      <% end %>
+      </div>
+      
+      
+      
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+

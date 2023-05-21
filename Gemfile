@@ -22,6 +22,8 @@ gem 'invisible_captcha'
 gem 'simple_form'
 gem "ice_cube"
 gem "simple_calendar", "~> 2.4"
+gem 'vanilla_nested'
+
 
 
 
