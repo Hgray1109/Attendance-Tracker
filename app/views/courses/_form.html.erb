@@ -15,25 +15,23 @@
           <%= day.to_s.humanize %>
       </label>
       <br>
+  
   <% end %>
+    <br/>
 
-      <h3>Enrollments</h3>
-      
-      
-      
+    
+    <h3>Enrollments</h3>  
     <%= link_to_add_nested(f, :enrollments, '#enrollments') do %>
-      <span><span>Add Enrollment</span></span>
+      <p class="btn btn-link">Add Enrollment</p>
     <% end %>
 
-
       <div id='enrollments'>
-      <%= f.simple_fields_for :enrollments do |enrollment| %>
-        <%= render 'enrollment_fields', form: enrollment %>
-      <% end %>
+        <%= f.simple_fields_for :enrollments do |enrollment| %>
+          <%= render 'enrollment_fields', form: enrollment %>
+        <% end %>
       </div>
-      
-      
-      
+    
+    
 
   <div class="form-actions">
     <%= f.button :submit %>
