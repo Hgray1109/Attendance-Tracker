@@ -13,11 +13,14 @@
           <%= link_to lesson.user_id, user_path(lesson.user) %>
           Classroom:
           <%= link_to lesson.classroom_id, classroom_path(lesson.classroom)  %>
+          Status: 
+          <%= status_label(lesson.status) %>
           Start: 
           <%= lesson.start.strftime("%I:%M %p") %>
-          
-          <% lesson.course.enrollments.each do |enrollment| %>
-            <%= enrollment.user %>
+          <br/>
+          <% lesson.attendances.each do |attendance| %>
+            <%= attendance.user %>
+            <%= status_label(attendance.status) %>
           <% end %>
         </div>
       <% end %>
