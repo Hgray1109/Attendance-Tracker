@@ -30,10 +30,6 @@
             <div class="fa-solid fa-graduation-cap"></div>
             Courses
           <% end %>
-          <%= link_to lessons_path, class: "nav-link #{'active fw-bold' if current_page?(lessons_path)}" do %>
-            <div class="fa-solid fa-list-ul"></div>
-            Lessons
-          <% end %>
           <%= link_to new_user_invitation_path, class: "nav-link #{'active fw-bold' if current_page?(new_user_invitation_path)}" do %>
           <div class="fa-solid fa-envelope"></div>
             Invite Users

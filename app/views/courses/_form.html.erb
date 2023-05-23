@@ -20,16 +20,17 @@
     <br/>
 
     
-    <h3>Enrollments</h3>  
-    <%= link_to_add_nested(f, :enrollments, '#enrollments') do %>
-      <p class="btn btn-link">Add Enrollment</p>
-    <% end %>
-
+    <h3>Enrollments</h3> 
+     
     <div id='enrollments'>
       <%= f.simple_fields_for :enrollments do |enrollment| %>
         <%= render 'enrollment_fields', form: enrollment %>
       <% end %>
     </div>
+
+    <%= link_to_add_nested(f, :enrollments, '#enrollments') do %>
+      <span class="btn btn-link">Add Enrollment</span>
+    <% end %>
     
   </div>  
 

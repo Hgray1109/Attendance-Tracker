@@ -5,14 +5,16 @@
       <%= date %>
       <% lessons.each do |lesson| %>
         <div>
-          Id:
-          <%= link_to lesson.id, lesson_path(lesson) %>
+          Lesson-id:
+          <%= link_to lesson.id, edit_course_lesson_path(lesson.course, lesson) %>
           Course:
           <%= link_to lesson.course_id, course_path(lesson.course) %>
+          <br/>
           User:
           <%= link_to lesson.user_id, user_path(lesson.user) %>
-          Classroom:
+          Classroom-id:
           <%= link_to lesson.classroom_id, classroom_path(lesson.classroom)  %>
+          <br/>
           Status: 
           <%= status_label(lesson.status) %>
           Start: 

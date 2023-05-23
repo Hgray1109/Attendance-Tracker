@@ -69,21 +69,20 @@ class CoursesController < ApplicationController
 
   # DELETE /courses/1 or /courses/1.json
   def destroy
-    @course.destroy
-
-    respond_to do |format|
-      format.html { redirect_to courses_url, notice: "Course was successfully destroyed." }
-      format.json { head :no_content }
-    end
+   if @course.destroy
+      redirect_to courses_url, notice: "Course was successfully destroyed."
+   else
+      redirect_to courses_url, alert: "This Course has lessons and can not be deleted."
+   end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_course
       @course = Course.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+ 
     def course_params
       params.require(:course).permit(:user_id, :classroom_id, :subject_id, :start_time, 
         *Course::DAYS_OF_THE_WEEK,

@@ -49,12 +49,11 @@ class SubjectsController < ApplicationController
 
   # DELETE /subjects/1 or /subjects/1.json
   def destroy
-    @subject.destroy
-
-    respond_to do |format|
-      format.html { redirect_to subjects_url, notice: "Subject was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    if @subject.destroy
+      redirect_to subjects_url, notice: "Subject was successfully destroyed."
+    else
+      redirect_to subjects_url, alert: "This Subject has Courses and can not be deleted."
+   end
   end
 
   private

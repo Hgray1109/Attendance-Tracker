@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :lessons
   resources :courses do
+    resources :lessons, except: [:index, :show], controller: "courses/lessons"
     member do
       patch :generate_lessons
     end

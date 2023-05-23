@@ -35,6 +35,11 @@ include Roleable
       self.update(student: true)
     end
 
+    has_many :enrollments, dependent: :restrict_with_error
+    has_many :lessons, dependent: :restrict_with_error
+    has_many :attendances, dependent: :restrict_with_error
+    has_many :courses, dependent: :restrict_with_error
+
     def to_s
       email
     end
