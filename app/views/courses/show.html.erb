@@ -11,15 +11,15 @@
   <div class="card-body">
   
     <b>User:</b>
-    <%= @course.user %>
+    <%= link_to @course.user, @course.user %>
     <br>
   
     <b>Classroom:</b>
-    <%= @course.classroom %>
+    <%= link_to @course.classroom, @course.classroom %>
     <br>
   
     <b>Subject:</b>
-    <%= @course.subject %>
+    <%= link_to @course.subject, @course.subject %>
     <br>
 
     <b>Start Time:</b>
