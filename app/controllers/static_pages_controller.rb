@@ -8,6 +8,10 @@ class StaticPagesController < ApplicationController
   end
 
   def calendar
+    @users = User.all.order(email: :asc)
+    @classrooms = Classroom.all.order(name: :asc)
+    @courses = Course.all.order(id: :asc)
+
     if params.has_key?(:user_id)
       lessons = Lesson.includes(:user, :classroom, :course, :attendances)
       if params[:user_id].present?

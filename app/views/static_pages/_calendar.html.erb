@@ -10,8 +10,10 @@
         
           Lesson-id:
           <%= link_to lesson.id, edit_course_lesson_path(lesson.course, lesson) %>
-          Course:
-          <%= link_to lesson.course_id, course_path(lesson.course) %>
+         <% unless @course.present? %>
+            Course:
+            <%= link_to lesson.course_id, course_path(lesson.course) %>
+          <% end %>
           User:
           <%= link_to lesson.user, user_path(lesson.user) %>
           Classroom-id:
