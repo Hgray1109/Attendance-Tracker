@@ -43,9 +43,13 @@ include Roleable
     
     after_touch do
       calculate_student_total
+      calculate_teacher_total
+      calculate_balance
     end
    
     monetize :student_total, as: :student_total_cents
+    monetize :teacher_price_total, as: :teacher_price_total_cents
+    monetize :balance, as: :balance_cents
 
     def to_s
       email
@@ -59,6 +63,14 @@ include Roleable
      
     def calculate_student_total
       update_column :student_total, attendances.map(&:student_price_final).sum
+    end
+
+    def calculate_teacher_total
+      update_column :teacher_price_total, lessons.map(&:teacher_price_final).sum
+    end
+
+    def calculate_balance
+      update_column :balance, (teacher_price_total - student_total)
     end
 
 end
