@@ -1,5 +1,5 @@
 <div class="attendance_fields">
-  <%= form.association :user %>
+  <%= form.input :user_id, collection: @course.users %>
   <%= form.input :status, collection: Attendance.statuses, as: :radio_buttons, :item_wrapper_class => 'inline', include_blank: false %>
  
   <%= link_to_remove_nested(form) do %>

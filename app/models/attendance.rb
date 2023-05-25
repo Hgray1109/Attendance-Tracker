@@ -8,6 +8,19 @@ class Attendance < ApplicationRecord
     validates_uniqueness_of :user_id, scope: :lesson_id
     validates_uniqueness_of :lesson_id, scope: :user_id 
 
+
+    validate :can_not_be_enrolled_in_own_lesson
+
+    def can_not_be_enrolled_in_own_lesson
+        if user_id.present?
+            if user_id == lesson.user_id || user_id == lesson.course.user_id
+                errors.add(:user_id, "Cannot be enrolled in own lesson")
+            end
+        end
+    end
+
+
+
     monetize :student_price_start, as: :student_price_start_cents
     monetize :student_price_final, as: :student_price_final_cents
 
