@@ -26,9 +26,10 @@
           <ul class="list-group">
             <% lesson.attendances.each do |attendance| %>
               <li class="list-group-item">
-                <%= attendance.user %>
+                <%= link_to attendance.user, user_path(attendance.user) %>
                 <%= status_label(attendance.status) %>
-              </li>
+                <%= attendance.student_price_start_cents %>
+                </li>
             <% end %>
           </ul>
           

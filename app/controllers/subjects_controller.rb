@@ -3,7 +3,7 @@ class SubjectsController < ApplicationController
 
   # GET /subjects or /subjects.json
   def index
-    @subjects = Subject.all
+    @subjects = Subject.all.order(created_at: :asc)
   end
 
   # GET /subjects/1 or /subjects/1.json

@@ -62,6 +62,13 @@
 
         <br/>
     <div class="card-footer">
+        <b><%= "Attendances_Count".humanize %>: </b>
+        <%= @user.attendances.count %>
+        <br/>
+        <b><%= "Attendances_price".humanize %>: </b>
+        <%= @user.total_attendance_price_cents %>
+    </div>
+    <div class="card-footer">
         <%= link_to "All Users", users_path %>
     </div>
 </div>
