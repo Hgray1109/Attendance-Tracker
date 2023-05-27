@@ -4,7 +4,7 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :user %>
+    <%= f.association :user, label: "Instructor" %>
     <%= f.association :classroom %>
     <%= f.input :status, as: :radio_buttons, collection: Lesson.statuses, :item_wrapper_class => 'inline', include_blank: false %>
     <%= f.input :start, ampm: true, minute_step: 15, start_year: Date.today.year, end_year: Date.today.year + 1 %>
@@ -18,7 +18,7 @@
     </div>
 
     <%= link_to_add_nested(f, :attendances, '#attendances') do %>
-      <span class="btn btn-link">Add Attendance</span>
+      <p class='btn btn-sm btn-primary'">Add Attendance</p>
     <% end %>
 
   </div>

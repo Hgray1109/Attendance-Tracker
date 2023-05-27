@@ -1,9 +1,11 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy, :generate_lessons]
+  # before_action :require_admin_teacher_or_owner, only: [:edit, :update, :destroy]
+  # before_action :require_admin_teacher, only: [:new]
 
   # GET /courses or /courses.json
   def index
-    @courses = Course.all
+    @courses = Course.all.order(created_at: :desc)
   end
 
   def generate_lessons
@@ -37,6 +39,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/1/edit
   def edit
+    @course = Course.find(params[:id])
   end
 
   # POST /courses or /courses.json
@@ -88,4 +91,19 @@ class CoursesController < ApplicationController
         *Course::DAYS_OF_THE_WEEK,
         enrollments_attributes: [:id, :user_id, :_destroy])
     end
+
+  #   def require_admin_teacher
+  #     unless current_user.admin? || current_user.teacher?
+  #       redirect_to (request.referrer || root_path), alert: "You are not authorized to perform this aciton"
+  #     end
+  # end
+    
+
+  #   def require_admin_teacher_or_owner
+  #     @course = Course.find(params[:id])
+  #     unless current_user.admin? || current_user.teacher? || current_user.id == @course.user_id
+  #         redirect_to (request.referrer || root_path), alert: "You are not authorized to perform this aciton"
+  #     end
+  #   end
+
 end

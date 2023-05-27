@@ -65,19 +65,19 @@
         <b><%= "Attendances_Count".humanize %>: </b>
         <%= @user.attendances.count %>
         <br/>
-        <b><%= "Student_total".humanize %>: </b>
-        <%= @user.student_total_cents %>
+        <b><%= "Total Student Cost".humanize %>: </b>
+        <span> $<%= @user.student_total_cents %></span>
         <br/>
         <b><%= "Lessons_count".humanize %>: </b>
         <%= @user.lessons.count %>
         <br/>
-        <b><%= "Teacher_total".humanize %>: </b>
-        <%= @user.teacher_price_total_cents %>
+        <b><%= "Total Teacher Earnings".humanize %>: </b>
+        <span> $<%= @user.teacher_price_total_cents %></span>
         <br/>
         <b><%= "Balance".humanize %>: </b>
-        <%= @user.balance_cents %>
+        <span> $<%= @user.balance_cents %></span>
     </div>
     <div class="card-footer">
-        <%= link_to "All Users", users_path %>
+        <%= link_to "All Users", users_path, class: "btn btn-sm btn-secondary" %>
     </div>
 </div>

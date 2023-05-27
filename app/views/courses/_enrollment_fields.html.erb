@@ -1,9 +1,9 @@
 <div class="enrollment_fields">
-  <%= form.association :user %>
+  <%= form.association :user, prompt: "Select..." %>
  
   <%= link_to_remove_nested(form) do %>
-    <span class="btn btn-link">
+    <p class='btn btn-sm btn-danger'>
       Remove enrollment
-    </span>
+    </p>
     <% end %>
 </div>

@@ -4,9 +4,9 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :user %>
-    <%= f.association :classroom %>
-    <%= f.association :subject %>
+    <%= f.association :user, prompt: "Select...", label: 'Instructor' %>
+    <%= f.association :classroom, prompt: "Select..." %>
+    <%= f.association :subject, prompt: "Select..." %>
     <%= f.input :start_time, ampm: true, minute_step: 15 %>
     <br/>
     <% Course::DAYS_OF_THE_WEEK.each do |day| %>
@@ -19,7 +19,6 @@
   <% end %>
     <br/>
 
-    
     <h3>Enrollments</h3> 
      
     <div id='enrollments'>
@@ -29,7 +28,7 @@
     </div>
 
     <%= link_to_add_nested(f, :enrollments, '#enrollments') do %>
-      <span class="btn btn-link">Add Enrollment</span>
+      <p class='btn btn-sm btn-primary'>Add Enrollment</p>
     <% end %>
     
   </div>  

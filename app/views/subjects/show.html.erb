@@ -29,8 +29,8 @@
   
   </div>
   <div class="card-footer">
-     <%= link_to 'Back', subjects_path %> |
-    <%= link_to 'Edit', edit_subject_path(@subject), class: 'btn btn-sm btn-warning' %>
+     <%= link_to 'Back', subjects_path, class: 'btn btn-sm btn-secondary' %> |
+    <%= link_to 'Edit', edit_subject_path(@subject), class: 'btn btn-sm btn-warning' %> |
     <%= link_to 'Destroy', @subject, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
   </div>
 </div>

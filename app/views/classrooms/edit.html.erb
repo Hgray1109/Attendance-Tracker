@@ -9,7 +9,7 @@
     <%= render 'form', classroom: @classroom %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Back', @classroom %> |
-    <%= link_to 'Cancel', classrooms_path %>
+    <%= link_to 'Back', @classroom, class: "btn btn-sm btn-secondary" %> |
+    <%= link_to 'Cancel', classrooms_path, class: "btn btn-sm btn-danger" %>
   </div>
 </div>
