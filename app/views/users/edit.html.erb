@@ -35,13 +35,13 @@
             <% end %>
         <% end %>    
         <br/>
-        <%= f.button :submit %>
+        <%= f.button "Submit", type: "submit", class: "btn btn-primary" %>
         <% end %>
   </div>
 
   <div class="card-footer">
         <br/>
-        <%= link_to "Cancel", user_path(@user) %>
+        <%= link_to "Cancel", user_path(@user), class:"btn btn-sm btn-secondary" %>
   </div>  
 </div>
 

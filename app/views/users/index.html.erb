@@ -34,7 +34,13 @@
                     <%= boolean_label(user.confirmed?) %> 
                     </td>
                     <td><%= boolean_label(user.access_locked?) %> </td>
-                    <td><%= user.name %> </td>
+                    <td>
+                        <% if user.name.present? %>
+                            <%= user.name %> 
+                        <% else %>
+                            <%= link_to "Enter Name", edit_user_path(user), class:"btn btn-sm btn-secondary" %>
+                        <% end %>
+                    </td>
                     <td> 
                         <% if user.image.present? %>
                             <%= image_tag user.image, size: "30x30" %>

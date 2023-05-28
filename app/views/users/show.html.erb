@@ -1,7 +1,7 @@
 <div class='card shadow'>
     <div class="card-body">
         <b>Id:</b>
-        <%= link_to @user.id, user_path(@user)%><br/>
+        <%= @user.id %><br/>
         <b>Email:</b>
         <%= @user.email %><br />
         <b>Confirmation:</b>
@@ -13,11 +13,11 @@
         <b><%= "sign_in_count".humanize %>: </b>
         <%= @user.sign_in_count %>
         <br/>
-        <b><%= "current_sign_in_at".humanize %>: </b>
-        <%= @user.current_sign_in_at %>
+        <b><%= "current_sign_in".humanize %>: </b>
+        <%= @user.current_sign_in_at&.strftime("%b/%d/%y - %I:%M %p") %>
         <br/>
-        <b><%= "last_sign_in_at".humanize %>: </b>
-        <%= @user.last_sign_in_at %>
+        <b><%= "last_sign_in".humanize %>: </b>
+        <%= @user.last_sign_in_at&.strftime("%b/%d/%y - %I:%M %p") %>
         <br/>
         <b><%= "current_sign_in_ip".humanize %>: </b>
         <%= @user.current_sign_in_ip %>

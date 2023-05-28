@@ -15,11 +15,11 @@
     	  
         <th>Name</th>
         
-        <th>Duration</th>
+        <th>Class Length</th>
         
         <th>Price</th>
 
-        <th>Teacher Price</th>
+        <th>Teacher Rate</th>
 
         <th>Courses</th>
         
@@ -35,9 +35,9 @@
           
             <td><%= subject.duration %></td>
           
-            <td><%= subject.client_price_cents %></td>
+            <td><span> $<%= subject.client_price_cents %></span></td>
 
-            <td><%= subject.teacher_price_cents %></td>
+           <td> <span> $<%= subject.teacher_price_cents %></span></td>
 
             <td><%= subject.courses.count %></td>
           
