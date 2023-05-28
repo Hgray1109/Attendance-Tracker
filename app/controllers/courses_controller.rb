@@ -87,7 +87,7 @@ class CoursesController < ApplicationController
 
  
     def course_params
-      params.require(:course).permit(:user_id, :classroom_id, :subject_id, :start_time, 
+      params.require(:course).permit(:user_id, :classroom_id, :subject_id, :start_time, :client_price_cents,
         *Course::DAYS_OF_THE_WEEK,
         enrollments_attributes: [:id, :user_id, :_destroy])
     end

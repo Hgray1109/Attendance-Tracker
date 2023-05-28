@@ -4,7 +4,7 @@ class Courses::LessonsController < ApplicationController
 
 
   def new
-    @lesson = Lesson.new(classroom_id: @course.classroom_id, user_id: @course.user_id)
+    @lesson = Lesson.new(classroom_id: @course.classroom_id, user_id: @course.user_id, start: @course.start_time)
     @lesson.attendances.build(@course.enrollments.as_json(only: [:user_id]))
   end
 

@@ -24,7 +24,8 @@
           <%= link_to lesson.classroom, classroom_path(lesson.classroom)  %>
           Status: 
           <%= status_label(lesson.status) %>
-          Start: 
+          <br/>
+          Lesson Time: 
           <%= lesson.start.strftime("%I:%M %p") %>
 
           <ul class="list-group">

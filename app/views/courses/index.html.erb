@@ -15,10 +15,8 @@
         <th>Instructor</th>
         <th>Classroom</th>
         <th>Subject</th>
-        <th>Start Time</th>
-        <th>Days</th>
-       
-        <th>Occurences</th>
+        <th>Original Start Date</th>
+
         <th>Enrollments</th>
         <th>Lessons</th>
        
@@ -36,19 +34,10 @@
           
             <td><%= link_to course.subject, course.subject %></td>
 
-            <td><%= course.start_time&.strftime("%I:%M %p") %></td>
+            <td><%= course.start_time&.strftime("%b/%d/%y - %I:%M %p") %></td>
 
-            <td><%= course.active_days.join(", ") %></td>
-
-           
-            <td><% course.schedule.next_occurrences(4).each do |occurrence| %>
-              <%= occurrence&.strftime("%b/%d/%y") %>
-              <br/>
-              <% end %>
-              <%= link_to "Generate Lesson", generate_lessons_course_path(course), method: :patch %>
-              </td>
-              <td><%= course.enrollments.count %></td>
-              <td><%= course.lessons.count %></td>
+            <td><%= course.enrollments.count %></td>
+            <td><%= course.lessons.count %></td>
              
           
           <td>

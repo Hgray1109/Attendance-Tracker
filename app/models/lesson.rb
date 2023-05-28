@@ -19,6 +19,7 @@ class Lesson < ApplicationRecord
 
     after_create do
       update_column :teacher_price_start, course.subject.teacher_price
+     
     end
 
   after_save do
@@ -30,6 +31,5 @@ class Lesson < ApplicationRecord
           update_column :teacher_price_final, 0
       end
   end
-
 
 end

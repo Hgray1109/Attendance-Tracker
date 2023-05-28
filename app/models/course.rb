@@ -12,6 +12,7 @@ class Course < ApplicationRecord
 
   include Schedulable
 
+
     def schedule 
       schedule = IceCube::Schedule.new(now = self.start_time&.to_datetime)
       schedule.add_recurrence_rule(
@@ -23,5 +24,6 @@ class Course < ApplicationRecord
     def to_s
       id
     end
+
 
 end
