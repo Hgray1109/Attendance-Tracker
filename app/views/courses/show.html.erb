@@ -73,9 +73,14 @@
 </div>
 <br/>
 
-<%= link_to new_course_lesson_path(@course), class: "btn btn-primary"  do %>
-  <div class="fa-solid fa-person-chalkboard"></div>
-  Create Single Lesson
-  <% end %>
+<div class="d-flex justify-content-evenly align-items-center">
+  <%= link_to new_course_lesson_path(@course), class: "btn btn-primary"  do %>
+    <div class="fa-solid fa-person-chalkboard"></div>
+    Create Single Lesson
+    <% end %>
+    <% if @course.lessons.count > 0 %>
+     <h3 class="text-light"> Lessons: <%= @course.lessons.count %> </h3>
+     <% end %>
+  </div>
 <p/>
 <%= render 'static_pages/calendar' %>

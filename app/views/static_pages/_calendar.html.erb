@@ -26,7 +26,8 @@
           <%= status_label(lesson.status) %>
           <br/>
           Lesson Time: 
-          <%= lesson.start.strftime("%I:%M %p") %>
+          <%= lesson.course.start_time&.strftime("%I:%M %p") %>
+          
 
           <ul class="list-group">
             <% lesson.attendances.each do |attendance| %>

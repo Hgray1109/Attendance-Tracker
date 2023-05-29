@@ -17,6 +17,7 @@ class CoursesController < ApplicationController
       @course.lessons.find_or_create_by(start: occurrence, user: @course.user, classroom: @course.classroom)
     end
 
+
     # generate attendances for future lessons
     @course.lessons.where("start > ?", Time.now).each do |lesson|
       @course.enrollments.each do |enrollment|

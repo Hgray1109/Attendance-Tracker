@@ -7,7 +7,7 @@
     <%= f.association :user, prompt: "Select...", label: 'Instructor' %>
     <%= f.association :classroom, prompt: "Select..." %>
     <%= f.association :subject, prompt: "Select..." %>
-    <%= f.input :start_time, ampm: true, minute_step: 15 %>
+    <%= f.input :start_time, ampm: true, start_year: Date.today.year, end_year: Date.today.year + 1, minute_step: 15 %>
     <br/>
     <% Course::DAYS_OF_THE_WEEK.each do |day| %>
       <label>

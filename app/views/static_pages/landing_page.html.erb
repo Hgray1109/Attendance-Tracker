@@ -1,17 +1,67 @@
 
-
-
-<div class="container-fluid">
-
-<h1>Home Page</h1>
-
-<%= link_to "Privacy", privacy_policy_path, class:"btn btn-lg btn-warning" %> <br />
-<%= link_to privacy_policy_path, class:"btn btn-lg btn-warning" do %>
-    <i class="fa-regular fa-flag fa-3x"></i>
-    Privacy Policy
-<% end %>
-
+<div class="text-center">
+    <h1> Agenda </h1>
+    <h3> Ruby on Rails 6</h3>
 </div>
 
+<div class="text-center">
+<% unless user_signed_in? %>
+  <hr>
+  <% User.omniauth_providers.each do |provider| %>
+    <%= link_to omniauth_authorize_path(User, provider), method: :post, class: "btn btn-md btn-outline-primary", data: { disable_with: "Connecting..." } do %>
+      Sign in with 
+      <%= provider.capitalize %>
+    <% end %>
+  <% end %>
+<% end %>
+</div>
+<hr>
 
 
+<div class="text-center">
+  <h2>Core features:</h2>
+</div>
+
+<div class="container list-unstyled ">
+  <div class="row align-items-start">
+    <div class="col-md-6">
+        <div class="text-center">
+            <h2>
+            Authentication
+            </h2>
+        </div>
+        <ul class="list-group list-unstyled text-center ">
+            <li>
+                Devise email authorization
+            </li>
+            <li>
+                Log in with Google
+            </li>
+            <li>
+                Log in with Github
+            </li>
+            <li>
+                Invisible Recaptcha
+            </li>
+            <li>
+                Email address confirmations
+            </li>
+        </ul>
+    </div>
+
+        <div class="col-md-6">
+            <div class="text-center">
+                <h2>Authorization</h2>
+            </div>
+            <ul class="list-group list-unstyled text-center">
+                <li>
+                    User roles
+                </li>
+                <li>
+                    Admin Privalges (edit/ban/update)
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
