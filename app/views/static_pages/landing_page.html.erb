@@ -10,8 +10,8 @@
   <% User.omniauth_providers.each do |provider| %>
     <%= link_to omniauth_authorize_path(User, provider), method: :post, class: "btn btn-md btn-outline-primary", data: { disable_with: "Connecting..." } do %>
       Sign in with 
-      <%= provider.capitalize %>
-    <% end %>
+      <%= provider.capitalize %> 
+    <% end %> 
   <% end %>
 <% end %>
 </div>
